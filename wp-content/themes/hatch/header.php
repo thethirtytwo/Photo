@@ -60,9 +60,11 @@
 						
 					</div><!-- #branding -->
 					
-					<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>				
-	
-					<?php do_atomic( 'header' ); // hatch_header ?>
+					<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
+
+
+
+                <?php do_atomic( 'header' ); // hatch_header ?>
 	
 				<?php do_atomic( 'close_header' ); // hatch_close_header ?>
 	

@@ -12,17 +12,21 @@ get_header(); // Loads the header.php template. ?>
 	
 	<?php do_atomic( 'before_masthead' ); // hatch_before_masthead ?>
 	
-	<div id="masthead">
+	 <div id="masthead">
 		
 		<?php do_atomic( 'open_masthead' ); // hatch_open_masthead ?>
 		
 		<?php $hatch_author_bio = hybrid_get_setting( 'hatch_author_bio' ) ? hybrid_get_setting( 'hatch_author_bio' ) : '1'; ?>
 		
 		<div id="author-bio"><?php the_author_meta( 'description', $hatch_author_bio ); ?></div>
-		
-		<div id="header-banner" role="banner">
-			
-			<?php // Check to see if the header image has been removed
+
+         <?php if (function_exists('nivoslider4wp_show')) { nivoslider4wp_show(); } ?>
+
+         <div id="header-banner" role="banner">
+
+
+
+             <?php // Check to see if the header image has been removed
 			$header_image = get_header_image();
 			
 			if ( ! empty( $header_image ) ) : ?>
